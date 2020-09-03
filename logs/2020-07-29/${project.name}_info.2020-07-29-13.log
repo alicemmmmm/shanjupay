@@ -1,0 +1,301 @@
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,141 INFO [main][:] - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,161 INFO [main][WelcomeLogoApplicationListener.java:63] - 
+
+ :: Dubbo Spring Boot (v2.7.1) : https://github.com/apache/incubator-dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,168 INFO [main][OverrideDubboConfigApplicationListener.java:68] - Dubbo Config was overridden by externalized configuration {dubbo.application.name=transaction-service, dubbo.application.qos-enable=false, dubbo.application.qos.port=22250, dubbo.config.multiple=true, dubbo.consumer.check=false, dubbo.consumer.retries=-1, dubbo.consumer.timeout=3000, dubbo.protocol.name=dubbo, dubbo.protocol.port=20893, dubbo.registry.address=nacos://127.0.0.1:8848, dubbo.scan.base-packages=com.shanjupay}
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,736 INFO [main][PostProcessorRegistrationDelegate.java:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$26003c83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,804 WARN [main][AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'nacosConfigProperties': Could not bind properties to 'NacosConfigProperties' : prefix=spring.cloud.nacos.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.nacos.config.ext-config[5].refresh' to boolean
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,811 INFO [main][ConditionEvaluationReportLoggingListener.java:142] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,818 ERROR [main][LoggingFailureAnalysisReporter.java:42] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.nacos.config.ext-config[5].refresh' to boolean:
+
+    Property: spring.cloud.nacos.config.ext-config[5].refresh
+    Value: truespring-boot-starter-rocketmq.yaml
+    Origin: class path resource [bootstrap.yml]:46:22
+    Reason: failed to convert java.lang.String to boolean
+
+Action:
+
+Update your application's configuration
+
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:16,820 ERROR [main][SpringApplication.java:858] - Application run failed
+org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'nacosConfigProperties': Could not bind properties to 'NacosConfigProperties' : prefix=spring.cloud.nacos.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.nacos.config.ext-config[5].refresh' to boolean
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:110)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:93)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1754)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:191)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:105)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.shanjupay.transaction.TransactionBootstrap.main(TransactionBootstrap.java:11)
+Caused by: org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.nacos.config.ext-config[5].refresh' to boolean
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:249)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:225)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$3(Binder.java:336)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:83)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:72)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:344)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1359)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:345)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:434)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:388)
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:342)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:277)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$0(Binder.java:299)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withSource(Binder.java:424)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$900(Binder.java:388)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$1(Binder.java:301)
+	at org.springframework.boot.context.properties.bind.IndexedElementsBinder.bindIndexed(IndexedElementsBinder.java:113)
+	at org.springframework.boot.context.properties.bind.IndexedElementsBinder.bindIndexed(IndexedElementsBinder.java:89)
+	at org.springframework.boot.context.properties.bind.IndexedElementsBinder.bindIndexed(IndexedElementsBinder.java:71)
+	at org.springframework.boot.context.properties.bind.CollectionBinder.bindAggregate(CollectionBinder.java:51)
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:58)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$2(Binder.java:304)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:388)
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:303)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:261)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$3(Binder.java:336)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:83)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:72)
+	at org.springframework.boot.context.properties.bind.JavaBeanBinder.bind(JavaBeanBinder.java:54)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$null$4(Binder.java:344)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1359)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindBean$5(Binder.java:345)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:448)
+	at org.springframework.boot.context.properties.bind.Binder$Context.withBean(Binder.java:434)
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$400(Binder.java:388)
+	at org.springframework.boot.context.properties.bind.Binder.bindBean(Binder.java:342)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:277)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:208)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:190)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:83)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:107)
+	... 30 more
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [boolean] for value 'truespring-boot-starter-rocketmq.yaml'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value 'truespring-boot-starter-rocketmq.yaml'
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:46)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:191)
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:177)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:98)
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:90)
+	at org.springframework.boot.context.properties.bind.Binder.bindProperty(Binder.java:326)
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:265)
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:220)
+	... 91 more
+Caused by: java.lang.IllegalArgumentException: Invalid boolean value 'truespring-boot-starter-rocketmq.yaml'
+	at org.springframework.core.convert.support.StringToBooleanConverter.convert(StringToBooleanConverter.java:63)
+	at org.springframework.core.convert.support.StringToBooleanConverter.convert(StringToBooleanConverter.java:31)
+	at org.springframework.core.convert.support.GenericConversionService$ConverterAdapter.convert(GenericConversionService.java:385)
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:40)
+	... 98 more
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:20,719 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:21,046 DEBUG [NettyServerWorker-6-5][HeartbeatHandler.java:74] -  [DUBBO] Received heartbeat from remote channel /192.168.56.1:50912, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:22,622 DEBUG [NettyServerWorker-6-1][HeartbeatHandler.java:74] -  [DUBBO] Received heartbeat from remote channel /192.168.56.1:53008, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:25,497 INFO [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:48] -  [DUBBO] Initial connection to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:26,502 ERROR [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:51] -  [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.56.1:20893/com.alibaba.cloud.dubbo.service.DubboMetadataService?anyhost=true&application=uaa-service&bind.ip=192.168.56.1&bind.port=20893&check=false&codec=dubbo&deprecated=false&dubbo=2.0.2&dynamic=true&generic=true&group=transaction-service&heartbeat=60000&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&methods=getAllServiceKeys,getServiceRestMetadata,getExportedURLs,getAllExportedURLs&pid=8740&qos.enable=false&qos.port=22220&register=true&register.ip=192.168.56.1&release=2.7.3&remote.application=transaction-service&retries=-1&revision=2.1.0.RELEASE&side=consumer&sticky=false&timeout=3000&timestamp=1597547490669&version=1.0.0) failed to connect to server /192.168.56.1:20893, error message is:Connection refused: no further information: /192.168.56.1:20893
+	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:166)
+	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:190)
+	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:246)
+	at org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient.reconnect(HeaderExchangeClient.java:155)
+	at org.apache.dubbo.remoting.exchange.support.header.ReconnectTimerTask.doTask(ReconnectTimerTask.java:49)
+	at org.apache.dubbo.remoting.exchange.support.header.AbstractTimerTask.run(AbstractTimerTask.java:87)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:648)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.56.1:20893
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:665)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:612)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:529)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:491)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 more
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:27,993 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:241] - List of Servers for transaction-service obtained from Discovery client: [192.168.43.87:56050]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for transaction-service obtained from Discovery client: [192.168.43.87:56050]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [transaction-service]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [transaction-service]:  addServer [192.168.43.87:56050]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {unknown=[192.168.43.87:56050]}
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [transaction-service_unknown]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:28,906 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:507] - LoadBalancer [transaction-service_unknown]:  addServer [192.168.43.87:56050]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:29,214 DEBUG [NettyServerWorker-6-4][HeartbeatHandler.java:74] -  [DUBBO] Received heartbeat from remote channel /192.168.56.1:49312, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,709 DEBUG [NettyClientWorker-4-4][NettyClientHandler.java:121] -  [DUBBO] IdleStateEvent triggered, send heartbeat to channel NettyChannel [channel=[id: 0x817b09b9, L:/192.168.56.1:49414 - R:/192.168.56.1:20890]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,710 DEBUG [NettyClientWorker-4-4][HeartbeatHandler.java:84] -  [DUBBO] Receive heartbeat response in thread NettyClientWorker-4-4, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,767 DEBUG [NettyClientWorker-4-1][NettyClientHandler.java:121] -  [DUBBO] IdleStateEvent triggered, send heartbeat to channel NettyChannel [channel=[id: 0x36826d2a, L:/192.168.56.1:53345 - R:/192.168.56.1:20891]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,768 DEBUG [NettyClientWorker-4-1][HeartbeatHandler.java:84] -  [DUBBO] Receive heartbeat response in thread NettyClientWorker-4-1, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,777 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,920 DEBUG [NettyClientWorker-4-5][NettyClientHandler.java:121] -  [DUBBO] IdleStateEvent triggered, send heartbeat to channel NettyChannel [channel=[id: 0xa775565c, L:/192.168.56.1:51136 - R:/192.168.56.1:20896]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:30,921 DEBUG [NettyClientWorker-4-5][HeartbeatHandler.java:84] -  [DUBBO] Receive heartbeat response in thread NettyClientWorker-4-5, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:241] - List of Servers for merchant-application obtained from Discovery client: [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for merchant-application obtained from Discovery client: [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:491] - LoadBalancer [merchant-application]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:507] - LoadBalancer [merchant-application]:  addServer [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {unknown=[192.168.43.87:57010]}
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:491] - LoadBalancer [merchant-application_unknown]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,466 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:507] - LoadBalancer [merchant-application_unknown]:  addServer [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,868 DEBUG [NettyClientWorker-4-1][NettyClientHandler.java:121] -  [DUBBO] IdleStateEvent triggered, send heartbeat to channel NettyChannel [channel=[id: 0x9c677d25, L:/192.168.56.1:60074 - R:/192.168.56.1:20880]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:31,869 DEBUG [NettyClientWorker-4-1][HeartbeatHandler.java:84] -  [DUBBO] Receive heartbeat response in thread NettyClientWorker-4-1, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:37,525 WARN [com.alibaba.nacos.naming.client.listener][AbstractRegistry.java:395] -  [DUBBO] Ignore empty notify urls for subscribe url consumer://192.168.56.1/org.apache.dubbo.rpc.service.GenericService?application=payment-agent-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&generic=true&group=transaction-service&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&pid=12944&qos.enable=false&qos.port=22270&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547719910&version=1.0.0, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:37,530 WARN [com.alibaba.nacos.naming.client.listener][AbstractRegistry.java:395] -  [DUBBO] Ignore empty notify urls for subscribe url consumer://192.168.56.1/org.apache.dubbo.rpc.service.GenericService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&generic=true&group=transaction-service&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547520558&version=1.0.0, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:37,531 WARN [com.alibaba.nacos.naming.client.listener][AbstractRegistry.java:395] -  [DUBBO] Ignore empty notify urls for subscribe url consumer://192.168.56.1/org.apache.dubbo.rpc.service.GenericService?application=merchant-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&generic=true&group=transaction-service&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&pid=9724&qos.enable=false&qos.port=22310&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547606960&version=1.0.0, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,642 INFO [com.alibaba.nacos.naming.client.listener][DubboServiceDiscoveryAutoConfiguration.java:157] - The event of the service instances[name : transaction-service , size : 0] change is about to be dispatched
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,642 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : consumer://192.168.56.1/com.shanjupay.user.api.TenantService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,642 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.user.api.TenantService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,643 WARN [com.alibaba.nacos.naming.client.listener][RegistryDirectory.java:659] -  [DUBBO] Unsupported category providers,configurators,routers in notified url: empty://192.168.56.1/com.shanjupay.user.api.TenantService?application=merchant-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.TenantService&lazy=false&methods=modifyBundle,getTenantByAccount,getAccountByUsername,createBundle,initBundle,login,isExistAccountByUsername,unbindTenant,getBundle,removeTenant,queryTenants,queryBundleByTenantType,getAccountByMobile,queryAccount,getApplicationDTOByClientId,changeBundle,isExistAccountInTenantByUsername,createAccountInTenant,authentication,queryAccountRole,queryAccountInTenant,isExistAccountByMobile,sendMessage,createTenantRelateAccount,queryAllBundle,createAccount,getTenant,queryAdministratorByPage,isExistAccountInTenantByMobile,accountPassword,createTenantAndAccount,bindTenant&pid=9724&qos.enable=false&qos.port=22310&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547604815 from registry localhost:9090 to consumer 192.168.56.1, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,643 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : provider://192.168.56.1:20890/com.shanjupay.merchant.api.AppService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,643 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.merchant.api.AppService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,643 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : provider://192.168.56.1:20890/com.shanjupay.merchant.api.MerchantService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,643 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.merchant.api.MerchantService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,879 INFO [com.alibaba.nacos.naming.client.listener][DubboServiceDiscoveryAutoConfiguration.java:157] - The event of the service instances[name : transaction-service , size : 0] change is about to be dispatched
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,880 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : provider://192.168.56.1:20896/com.shanjupay.paymentagent.api.PayChannelAgentService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,880 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.paymentagent.api.PayChannelAgentService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,881 INFO [com.alibaba.nacos.naming.client.listener][DubboServiceDiscoveryAutoConfiguration.java:157] - The event of the service instances[name : transaction-service , size : 0] change is about to be dispatched
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,881 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : consumer://192.168.56.1/com.shanjupay.user.api.TenantService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,881 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.user.api.TenantService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,881 DEBUG [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:289] - The subscribed URL[consumer://192.168.56.1/com.shanjupay.user.api.TenantService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.TenantService&lazy=false&methods=modifyBundle,getTenantByAccount,getAccountByUsername,createBundle,initBundle,login,isExistAccountByUsername,getBundle,unbindTenant,removeTenant,queryTenants,queryBundleByTenantType,getAccountByMobile,getApplicationDTOByClientId,queryAccount,changeBundle,isExistAccountInTenantByUsername,createAccountInTenant,authentication,queryAccountRole,queryAccountInTenant,isExistAccountByMobile,sendMessage,createTenantRelateAccount,queryAllBundle,createAccount,getTenant,queryAdministratorByPage,isExistAccountInTenantByMobile,accountPassword,createTenantAndAccount,bindTenant&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547105624] will notify all URLs : [empty://192.168.56.1/com.shanjupay.user.api.TenantService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.TenantService&lazy=false&methods=modifyBundle,getTenantByAccount,getAccountByUsername,createBundle,initBundle,login,isExistAccountByUsername,getBundle,unbindTenant,removeTenant,queryTenants,queryBundleByTenantType,getAccountByMobile,getApplicationDTOByClientId,queryAccount,changeBundle,isExistAccountInTenantByUsername,createAccountInTenant,authentication,queryAccountRole,queryAccountInTenant,isExistAccountByMobile,sendMessage,createTenantRelateAccount,queryAllBundle,createAccount,getTenant,queryAdministratorByPage,isExistAccountInTenantByMobile,accountPassword,createTenantAndAccount,bindTenant&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547105624]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,881 WARN [com.alibaba.nacos.naming.client.listener][RegistryDirectory.java:659] -  [DUBBO] Unsupported category providers,configurators,routers in notified url: empty://192.168.56.1/com.shanjupay.user.api.TenantService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.TenantService&lazy=false&methods=modifyBundle,getTenantByAccount,getAccountByUsername,createBundle,initBundle,login,isExistAccountByUsername,getBundle,unbindTenant,removeTenant,queryTenants,queryBundleByTenantType,getAccountByMobile,getApplicationDTOByClientId,queryAccount,changeBundle,isExistAccountInTenantByUsername,createAccountInTenant,authentication,queryAccountRole,queryAccountInTenant,isExistAccountByMobile,sendMessage,createTenantRelateAccount,queryAllBundle,createAccount,getTenant,queryAdministratorByPage,isExistAccountInTenantByMobile,accountPassword,createTenantAndAccount,bindTenant&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547105624 from registry localhost:9090 to consumer 192.168.56.1, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : consumer://192.168.56.1/com.shanjupay.user.api.AuthorizationService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.user.api.AuthorizationService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 DEBUG [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:289] - The subscribed URL[consumer://192.168.56.1/com.shanjupay.user.api.AuthorizationService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.AuthorizationService&lazy=false&methods=removeRole,roleBindPrivilege,modifyRole,createRole,unbindAccountRole,queryPrivilege,queryRole,queryPrivilegeTree,queryRoleByPage,bindAccountRole,queryPrivilegeByGroupId,queryTenantRole,authorize&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547108015] will notify all URLs : [empty://192.168.56.1/com.shanjupay.user.api.AuthorizationService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.AuthorizationService&lazy=false&methods=removeRole,roleBindPrivilege,modifyRole,createRole,unbindAccountRole,queryPrivilege,queryRole,queryPrivilegeTree,queryRoleByPage,bindAccountRole,queryPrivilegeByGroupId,queryTenantRole,authorize&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547108015]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 WARN [com.alibaba.nacos.naming.client.listener][RegistryDirectory.java:659] -  [DUBBO] Unsupported category providers,configurators,routers in notified url: empty://192.168.56.1/com.shanjupay.user.api.AuthorizationService?application=uaa-service&category=providers,configurators,routers&check=false&dubbo=2.0.2&interface=com.shanjupay.user.api.AuthorizationService&lazy=false&methods=removeRole,roleBindPrivilege,modifyRole,createRole,unbindAccountRole,queryPrivilege,queryRole,queryPrivilegeTree,queryRoleByPage,bindAccountRole,queryPrivilegeByGroupId,queryTenantRole,authorize&pid=8740&qos.enable=false&qos.port=22220&release=2.7.3&retries=-1&side=consumer&sticky=false&timeout=3000&timestamp=1597547108015 from registry localhost:9090 to consumer 192.168.56.1, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 INFO [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:213] - The Dubbo Service URL[ID : provider://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService] is being subscribed for service[name : transaction-service]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 WARN [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:249] - There is no instance from service[name : transaction-service], and then Dubbo Service[key : com.shanjupay.uua.api.OauthClientDetailsService] will not be available , please make sure the further impact
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,884 DEBUG [com.alibaba.nacos.naming.client.listener][AbstractSpringCloudRegistry.java:289] - The subscribed URL[provider://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService?anyhost=true&application=uaa-service&bean.name=ServiceBean:com.shanjupay.uua.api.OauthClientDetailsService&bind.ip=192.168.56.1&bind.port=20881&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.shanjupay.uua.api.OauthClientDetailsService&methods=getClientDetailsByClientId,createClientDetails&pid=8740&qos.enable=false&qos.port=22220&register=true&release=2.7.3&side=provider&timestamp=1597547130858] will notify all URLs : [empty://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService?anyhost=true&application=uaa-service&bean.name=ServiceBean:com.shanjupay.uua.api.OauthClientDetailsService&bind.ip=192.168.56.1&bind.port=20881&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.shanjupay.uua.api.OauthClientDetailsService&methods=getClientDetailsByClientId,createClientDetails&pid=8740&qos.enable=false&qos.port=22220&register=true&release=2.7.3&side=provider&timestamp=1597547130858]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,885 DEBUG [com.alibaba.nacos.naming.client.listener][RegistryProtocol.java:524] -  [DUBBO] original override urls: [empty://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService?anyhost=true&application=uaa-service&bean.name=ServiceBean:com.shanjupay.uua.api.OauthClientDetailsService&bind.ip=192.168.56.1&bind.port=20881&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.shanjupay.uua.api.OauthClientDetailsService&methods=getClientDetailsByClientId,createClientDetails&pid=8740&qos.enable=false&qos.port=22220&register=true&release=2.7.3&side=provider&timestamp=1597547130858], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:38,885 DEBUG [com.alibaba.nacos.naming.client.listener][RegistryProtocol.java:528] -  [DUBBO] subscribe url: provider://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService?anyhost=true&application=uaa-service&bean.name=ServiceBean:com.shanjupay.uua.api.OauthClientDetailsService&bind.ip=192.168.56.1&bind.port=20881&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.shanjupay.uua.api.OauthClientDetailsService&methods=getClientDetailsByClientId,createClientDetails&pid=8740&qos.enable=false&qos.port=22220&register=true&release=2.7.3&side=provider&timestamp=1597547130858, override urls: [empty://192.168.56.1:20881/com.shanjupay.uua.api.OauthClientDetailsService?anyhost=true&application=uaa-service&bean.name=ServiceBean:com.shanjupay.uua.api.OauthClientDetailsService&bind.ip=192.168.56.1&bind.port=20881&category=configurators&check=false&deprecated=false&dubbo=2.0.2&dynamic=true&generic=false&interface=com.shanjupay.uua.api.OauthClientDetailsService&methods=getClientDetailsByClientId,createClientDetails&pid=8740&qos.enable=false&qos.port=22220&register=true&release=2.7.3&side=provider&timestamp=1597547130858], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:39,614 DEBUG [NettyServerWorker-6-1][HeartbeatHandler.java:74] -  [DUBBO] Received heartbeat from remote channel /192.168.56.1:60238, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:41,587 INFO [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:48] -  [DUBBO] Initial connection to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:42,594 ERROR [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:51] -  [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.56.1:20893/com.alibaba.cloud.dubbo.service.DubboMetadataService?anyhost=true&application=payment-agent-service&bind.ip=192.168.56.1&bind.port=20893&check=false&codec=dubbo&deprecated=false&dubbo=2.0.2&dynamic=true&generic=true&group=transaction-service&heartbeat=60000&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&methods=getAllServiceKeys,getServiceRestMetadata,getExportedURLs,getAllExportedURLs&pid=12944&qos.enable=false&qos.port=22270&register=true&register.ip=192.168.56.1&release=2.7.3&remote.application=transaction-service&retries=-1&revision=2.1.0.RELEASE&side=consumer&sticky=false&timeout=3000&timestamp=1597547490669&version=1.0.0) failed to connect to server /192.168.56.1:20893, error message is:Connection refused: no further information: /192.168.56.1:20893
+	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:166)
+	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:190)
+	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:246)
+	at org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient.reconnect(HeaderExchangeClient.java:155)
+	at org.apache.dubbo.remoting.exchange.support.header.ReconnectTimerTask.doTask(ReconnectTimerTask.java:49)
+	at org.apache.dubbo.remoting.exchange.support.header.AbstractTimerTask.run(AbstractTimerTask.java:87)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:648)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.56.1:20893
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:665)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:612)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:529)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:491)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 more
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:50,374 INFO [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:48] -  [DUBBO] Initial connection to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:50,722 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:51,376 ERROR [dubbo-client-idleCheck-thread-1][ReconnectTimerTask.java:51] -  [DUBBO] Fail to connect to HeaderExchangeClient [channel=org.apache.dubbo.remoting.transport.netty4.NettyClient [192.168.56.1:0 -> /192.168.56.1:20893]], dubbo version: 2.7.3, current host: 192.168.56.1
+org.apache.dubbo.remoting.RemotingException: client(url: dubbo://192.168.56.1:20893/com.alibaba.cloud.dubbo.service.DubboMetadataService?anyhost=true&application=merchant-service&bind.ip=192.168.56.1&bind.port=20893&check=false&codec=dubbo&deprecated=false&dubbo=2.0.2&dynamic=true&generic=true&group=transaction-service&heartbeat=60000&interface=com.alibaba.cloud.dubbo.service.DubboMetadataService&lazy=false&methods=getAllServiceKeys,getServiceRestMetadata,getExportedURLs,getAllExportedURLs&pid=9724&qos.enable=false&qos.port=22310&register=true&register.ip=192.168.56.1&release=2.7.3&remote.application=transaction-service&retries=-1&revision=2.1.0.RELEASE&side=consumer&sticky=false&timeout=3000&timestamp=1597547490669&version=1.0.0) failed to connect to server /192.168.56.1:20893, error message is:Connection refused: no further information: /192.168.56.1:20893
+	at org.apache.dubbo.remoting.transport.netty4.NettyClient.doConnect(NettyClient.java:166)
+	at org.apache.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:190)
+	at org.apache.dubbo.remoting.transport.AbstractClient.reconnect(AbstractClient.java:246)
+	at org.apache.dubbo.remoting.exchange.support.header.HeaderExchangeClient.reconnect(HeaderExchangeClient.java:155)
+	at org.apache.dubbo.remoting.exchange.support.header.ReconnectTimerTask.doTask(ReconnectTimerTask.java:49)
+	at org.apache.dubbo.remoting.exchange.support.header.AbstractTimerTask.run(AbstractTimerTask.java:87)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:648)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:727)
+	at org.apache.dubbo.common.timer.HashedWheelTimer$Worker.run(HashedWheelTimer.java:449)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.56.1:20893
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:665)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:612)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:529)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:491)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 11 more
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:57,996 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:58,908 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:241] - List of Servers for transaction-service obtained from Discovery client: []
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:58,908 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for transaction-service obtained from Discovery client: []
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:58,908 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [transaction-service]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:58,908 DEBUG [PollingServerListUpdater-0][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {}
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:36:58,908 DEBUG [PollingServerListUpdater-0][BaseLoadBalancer.java:491] - LoadBalancer [transaction-service_unknown]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:00,780 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:7) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:241] - List of Servers for merchant-application obtained from Discovery client: [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:246] - Filtered List of Servers for merchant-application obtained from Discovery client: [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:491] - LoadBalancer [merchant-application]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:507] - LoadBalancer [merchant-application]:  addServer [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][DynamicServerListLoadBalancer.java:179] - Setting server list for zones: {unknown=[192.168.43.87:57010]}
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:491] - LoadBalancer [merchant-application_unknown]: clearing server list (SET op)
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:01,468 DEBUG [PollingServerListUpdater-1][BaseLoadBalancer.java:507] - LoadBalancer [merchant-application_unknown]:  addServer [192.168.43.87:57010]
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:08,048 DEBUG [NettyClientWorker-4-2][NettyClientHandler.java:121] -  [DUBBO] IdleStateEvent triggered, send heartbeat to channel NettyChannel [channel=[id: 0xd4c5987f, L:/192.168.43.87:60081 - R:/192.168.43.87:20880]], dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-16 11:37:08,049 DEBUG [NettyClientWorker-4-2][HeartbeatHandler.java:84] -  [DUBBO] Receive heartbeat response in thread NettyClientWorker-4-2, dubbo version: 2.7.3, current host: 192.168.56.1

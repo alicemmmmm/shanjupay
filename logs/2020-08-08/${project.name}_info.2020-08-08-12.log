@@ -1,0 +1,7 @@
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:11,007 DEBUG [NettyServerWorker-6-4][HeartbeatHandler.java:74] -  [DUBBO] Received heartbeat from remote channel /192.168.56.1:51840, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.7.3, current host: 192.168.56.1
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:11,476 WARN [ThreadPoolTaskScheduler-1][DubboServiceMetadataRepository.java:216] - Current application will subscribe all services(size:6) in registry, a lot of memory and CPU cycles may be used, thus it's strongly recommend you using the externalized property 'dubbo.cloud.subscribed-services' to specify the services
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:22,722 DEBUG [http-nio-56010-exec-9][HttpServletRequestWrapper.java:229] - Path = null
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:22,722 DEBUG [http-nio-56010-exec-9][HttpServletRequestWrapper.java:230] - Transfer-Encoding = null
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:22,723 DEBUG [http-nio-56010-exec-9][HttpServletRequestWrapper.java:231] - Content-Encoding = null
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:22,723 DEBUG [http-nio-56010-exec-9][HttpServletRequestWrapper.java:232] - Content-Length header = -1
+[${project.name}][${env:SERVER_PORT}] 2020-08-08 13:00:22,724 DEBUG [http-nio-56010-exec-9][ZoneAwareLoadBalancer.java:112] - Zone aware logic disabled or there is only one zone
